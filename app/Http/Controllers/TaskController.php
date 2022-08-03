@@ -14,6 +14,7 @@ class TaskController extends Controller
      */
     public function index()
     {
+        // saleep(2);
         return Task::get();
     }
 
@@ -35,7 +36,9 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return Task::create([
+            'title' => $request->ali,
+        ]);
     }
 
     /**
