@@ -1,12 +1,12 @@
-// import './bootstrap';
-
 import { createApp } from 'vue'
-// import App from './App.vue'
+import { router } from './router'
+import App from './App.vue'
 import TasksApp from './components/Welcome.vue'
 import axios from 'axios'
 
 window.axios = axios
 
-const app = createApp(TasksApp)
+const app = createApp(App)
 
-app.mount('#app')//
+app.use(router)
+app.mount('#app')
